@@ -33,4 +33,5 @@ Can be installed with pip:
 [pyqrcode-example-img]:https://raw.githubusercontent.com/alishtory/qrcode-terminal/master/example/pyqrcode.jpg
 [cmdqrcode-example-img]:https://raw.githubusercontent.com/alishtory/qrcode-terminal/master/example/cmdqrcode.jpg
 
-
+## License
+Released under the [MIT License](https://raw.githubusercontent.com/dawndiy/qrcode-terminal/master/LICENSE).
