@@ -19,8 +19,7 @@ white_block = '\033[0;37;47m  '
 black_block = '\033[0;37;40m  '
 new_line = '\033[0m\n'
 
-
-def draw(str,version=1):
+def qr_termial_str(str,version=1):
     qr = qrcode.QRCode(version)
     qr.add_data(str)
     qr.make()
@@ -34,6 +33,10 @@ def draw(str,version=1):
                 output += white_block
         output += white_block + new_line
     output += white_block*(qr.modules_count+2) + new_line
+    return output
+
+def draw(str,version=1):
+    output = qr_termial_str(str,version)
     print(output)
 
 def draw_cmd():
