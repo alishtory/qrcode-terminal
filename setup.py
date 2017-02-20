@@ -11,7 +11,7 @@ from setuptools import setup
 
 setup(
     name='qrcode_terminal',
-    version='0.4',
+    version='0.5',
     license='MIT',
     author_email='840652591@qq.com',
     url='https://github.com/alishtory/qrcode_terminal',
