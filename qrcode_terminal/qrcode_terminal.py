@@ -19,7 +19,7 @@ white_block = '\033[0;37;47m  '
 black_block = '\033[0;37;40m  '
 new_line = '\033[0m\n'
 
-def qr_termial_str(str,version=1):
+def qr_terminal_str(str,version=1):
     qr = qrcode.QRCode(version)
     qr.add_data(str)
     qr.make()
