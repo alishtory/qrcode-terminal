@@ -36,7 +36,7 @@ def qr_terminal_str(str,version=1):
     return output
 
 def draw(str,version=1):
-    output = qr_termial_str(str,version)
+    output = qr_terminal_str(str,version)
     print(output)
 
 def draw_cmd():
