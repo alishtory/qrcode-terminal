@@ -12,7 +12,7 @@ You need install these:
 ## Install
 Can be installed with pip:
 ``` shell
-    pip install qrcode_terminal
+    pip install qrcode-terminal
 ```
 
 ## Useage

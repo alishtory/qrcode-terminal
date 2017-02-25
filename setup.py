@@ -10,11 +10,11 @@
 from setuptools import setup
 
 setup(
-    name='qrcode_terminal',
-    version='0.6',
+    name='qrcode-terminal',
+    version='0.7',
     license='MIT',
     author_email='840652591@qq.com',
-    url='https://github.com/alishtory/qrcode_terminal',
+    url='https://github.com/alishtory/qrcode-terminal',
     description='Python QRCode Terminal',
     platforms=['any'],
     py_modules= ['qrcode_terminal'],
