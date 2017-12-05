@@ -27,6 +27,7 @@ Can be installed with pip:
 ### In Terminal
 ``` shell
     qrcode-terminal-py -d http://www.baidu.com
+    echo "http://www.baidu.com" | qrcode-terminal-py
 ```
 ![Py QrCode][cmdqrcode-example-img]
 
