@@ -42,6 +42,8 @@ def draw(str,version=1):
 def draw_cmd():
     (options, args) = parser.parse_args()
     if not options.data:
+        options.data = sys.stdin.readline()[:-1]
+    if not options.data:
         print ('data must be specified. see %s -h' % sys.argv[0])
     else:
         size = options.size
