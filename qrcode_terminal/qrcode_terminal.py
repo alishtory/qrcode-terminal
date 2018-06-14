@@ -6,20 +6,28 @@
 @software: PyCharm
 @file: qrcode_terminal.py
 @time: 2017/2/10 16:38
+@Update: 2018/2/6 21:58
 '''
 import qrcode
 from optparse import OptionParser
 import sys
+import platform
 
 parser = OptionParser()
 parser.add_option('-d', '--data', dest='data', help='data to be paser to QRCode')
 parser.add_option('-s', '--size', type='choice', choices = ['s','m','l','S','M','L'], dest='size',default='s', help='QRCode size,you can choose S/M/L')
 
-white_block = '\033[0;37;47m  '
-black_block = '\033[0;37;40m  '
-new_line = '\033[0m\n'
 
 def qr_terminal_str(str,version=1):
+    if platform.system() == "Windows":
+        white_block = '▇'
+        black_block = '  '
+        new_line = '\n'
+    else:
+        white_block = '\033[0;37;47m  '
+        black_block = '\033[0;37;40m  '
+        new_line = '\033[0m\n'
+
     qr = qrcode.QRCode(version)
     qr.add_data(str)
     qr.make()
@@ -35,9 +43,11 @@ def qr_terminal_str(str,version=1):
     output += white_block*(qr.modules_count+2) + new_line
     return output
 
+
 def draw(str,version=1):
     output = qr_terminal_str(str,version)
-    print(output)
+    print (output)
+
 
 def draw_cmd():
     (options, args) = parser.parse_args()
